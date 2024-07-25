@@ -1,0 +1,22 @@
+<div class="container mt-5 mb-5" *ngIf="dog">
+    <div class="row justify-content-center">
+        <div class="col-md-6" style="width: 25rem;">
+            <div class="card border border-dark">
+                <div class="card-body">
+            <h3 class="text-center">{{dog.name}}</h3><br>
+            <p><strong>Bred For:</strong> {{dog.bred_for}}</p>
+            <p><b>Name: </b>{{dog.name}}</p>
+            <p><b>Country Code: </b>{{dog.countryCode}}</p>
+            <p><b>Breed Group: </b>{{dog.breed_group}}</p>
+            <p><b>Life Span: </b>{{dog.life_span}}</p>
+            <p><b>Temperament: </b>{{dog.temperament}}</p>
+            <p><b>Origin: </b>{{dog.origin}}</p>
+        </div>
+    </div>
+</div>
+</div>
+    <div class="container mt-5" *ngIf="!dog">
+        <p>Dog not found.</p>
+    </div>
+
+  

@@ -1,0 +1,44 @@
+<div class="container">
+  <h3 class="mt-5 text-center">Dogs</h3>
+  <p class="mt-3 text-center">A selection of all the dog breeds on the planet. Browse the different pages or click on
+    the buttons to find out more.</p>
+  <div class="row mt-5 mb-5">
+
+    <div class="col-3 mb-3 cards" *ngFor="let dog of dogs">
+      <div class="card border border-dark">
+        <img [src]="dog.imageUrl" class="card-img-top" alt="Fissure in Sandstone" />
+        <div class="card-body">
+          <h5 class="card-title">{{dog.name}}</h5>
+          <p class="card-text">{{dog.bred_for}}</p>
+          <a [routerLink]="['/dogs', dog.id]" class="btn btn-dark">Know More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row mt-5 mb-5">
+    <div class="col-12">
+      <nav aria-label="...">
+        <ul class="pagination pagination-lg justify-content-center">
+          <li (click)="setPage(1)" class="page-item" [class.active]="currentPage === 1">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li (click)="setPage(2)" class="page-item" [class.active]="currentPage === 2">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li (click)="setPage(3)" class="page-item" [class.active]="currentPage === 3">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li (click)="setPage(4)" class="page-item" [class.active]="currentPage === 3">
+            <a class="page-link" href="#">4</a>
+          </li>
+          <li (click)="setPage(5)" class="page-item" [class.active]="currentPage === 3">
+            <a class="page-link" href="#">5</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
